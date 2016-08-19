@@ -1,11 +1,15 @@
-execute pathogen#infect()
-"'itchyny/lightline.vim'
-"'scrooloose/nerdcommenter'
-"'jistr/vim-nerdtree-tabs'
-"'tpope/vim-pathogen'
-"'scrooloose/nerdtree'
-syntax on
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdtree'
+call vundle#end()
 filetype plugin indent on
+syntax on
 let mapleader=","
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
