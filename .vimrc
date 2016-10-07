@@ -35,3 +35,4 @@ let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+cmap w!! w !sudo tee > /dev/null %
