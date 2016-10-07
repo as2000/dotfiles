@@ -2,7 +2,7 @@ set -o vi
 #cd ~/src
 alias vmup="cd /Users/adien/src/p4l-containers/ && vagrant up"
 alias ll="ls -alhb"
-alias gnb="git checkout staging && git checkout -b"
+alias gnb="git checkout staging && git pull &&git checkout -b"
 alias tmux="tmux -2"
 alias cdmain="cd ~/src/p4l-main"
 
