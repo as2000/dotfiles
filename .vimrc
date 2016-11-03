@@ -1,4 +1,5 @@
 set nocompatible
+set number
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -7,6 +8,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()
 filetype plugin indent on
 syntax on
