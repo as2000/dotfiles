@@ -1,4 +1,3 @@
-set -o vi
 #cd ~/src
 alias vmup="cd /Users/adien/src/p4l-containers/ && vagrant up"
 alias ll="ls -alhb"
