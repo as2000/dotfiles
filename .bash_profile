@@ -12,6 +12,7 @@ alias gti="git"
 alias got="git"
 alias gut="git"
 alias vm="~/src/p4l-containers/bin/vagrant-ssh"
+alias psql="psql -h 127.0.0.1 -U test"
 
 parse_git_branch() {
        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
