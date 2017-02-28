@@ -98,37 +98,45 @@ bindsym $mod+a focus parent
 set $monL HDMI-2
 set $monR HDMI-1
 
-workspace 1 output $monL
-workspace 2 output $monR
 
-set $spotify 10: 
+set $spotify 10:
 set $chat 9: 
+set $log 8:
 set $storm 2:
 set $term 3:
 set $web 1:
 set $db 4:
+set $postman 5: 
+
 
 # switch to workspace
 bindsym $mod+1 workspace $web 
 bindsym $mod+2 workspace $storm
 bindsym $mod+3 workspace $term
 bindsym $mod+4 workspace $db
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace $postman
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
+bindsym $mod+8 workspace $log 
 bindsym $mod+9 workspace $chat
 bindsym $mod+s workspace $spotify
+
+#set screen 
+workspace $web  output $monL
+workspace $storm  output $monR
+workspace $spotify  output $monR
+workspace $chat  output $monR
+workspace $log  output $monR
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $web
 bindsym $mod+Shift+2 move container to workspace $storm
 bindsym $mod+Shift+3 move container to workspace $term
 bindsym $mod+Shift+4 move container to workspace $db
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $postman
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+8 move container to workspace $log
 bindsym $mod+Shift+9 move container to workspace $chat
 bindsym $mod+Shift+0 move container to workspace $spotify
 
@@ -136,6 +144,8 @@ bindsym $mod+Shift+0 move container to workspace $spotify
 assign [class="Spotify"]  $spotify
 assign [class="Slack"] $chat
 assign [class="jetbrains-phpstorm"] $storm
+assign [class="crx_fhbjgbiflinjbdggehcddcbncdddomop"] $postman
+
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
