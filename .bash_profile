@@ -17,9 +17,10 @@ alias gut="git"
 alias vm="~/src/p4l-containers/bin/vagrant-ssh"
 alias psql="psql -h 127.0.0.1 -U test"
 
-parse_git_branch() {
-       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+function _update_ps1() {
+    PS1="$(~/src/powerline-shell/powerline-shell.py $? 2> /dev/null)"
 }
- 
-export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
