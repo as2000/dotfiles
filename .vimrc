@@ -16,6 +16,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()
 filetype plugin indent on
 syntax on
@@ -46,4 +47,3 @@ let g:lightline = {
       \ }
 cmap w!! w !sudo tee > /dev/null %
 
-colorscheme solarized
