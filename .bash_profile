@@ -1,5 +1,6 @@
-set -o vi
 #cd ~/src
+export CLICOLOR=1
+export TERM=xterm-256color
 alias vmup="cd /Users/adien/src/p4l-containers/ && vagrant up"
 alias ll="ls -alhb"
 alias gnb="git checkout staging && git pull &&git checkout -b"
@@ -12,4 +13,5 @@ parse_git_branch() {
  
 export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-source ~/.helpers/bin/to
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
