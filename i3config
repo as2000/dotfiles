@@ -45,6 +45,7 @@ bindsym $mod+Shift+q kill
  bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
+bindsym $mod+x [urgent=latest] focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
@@ -97,7 +98,6 @@ bindsym $mod+a focus parent
 #monitors 
 set $monL HDMI-2
 set $monR HDMI-1
-
 
 set $spotify 10:
 set $chat 9: 
@@ -184,6 +184,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
        strip_workspace_numbers yes
+       tray_output $monR
        status_command i3status
 }
 
@@ -211,6 +212,7 @@ bindsym $mod+Control+Left move workspace to output left
 bindsym $mod+Control+Right move workspace to output right
 
 for_window [class="Chromium-browser"] border none
+for_window [class="Google-chrome"] border none
 
 bindsym --whole-window button10 exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym --whole-window button11 exec --no-startup-id amixer -D pulse sset Master 5%-
@@ -223,7 +225,7 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- 
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle 
-bindsym XF86Sleep exec --no-startup-id i3lock -i  ~/Desktop/HptP4.png --pointer=win
+bindsym XF86Sleep exec --no-startup-id i3lock #-i  ~/Desktop/HptP4.png --pointer=win
 
-exec_always feh --bg-fill ~/Desktop/image_uploaded_from_ios.jpg 
+exec_always feh --bg-fill ~/Desktop/image_uploaded_from_
 
