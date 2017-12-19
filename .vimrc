@@ -47,3 +47,4 @@ let g:lightline = {
 cmap w!! w !sudo tee > /dev/null %
 
 set t_Co=256
+set backupcopy=yes
