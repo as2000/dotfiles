@@ -17,6 +17,7 @@ ln i3config ~/.config/i3/config
 ln tmux.conf ~/.tmux.conf
 ln gitconfig-personal ~/.gitconfig
 ln bash_profile ~/.bash_profile
+sudo cp i3exit /usr/local/bin/i3exit
 
 cd ~/src/powerline-shell
 sudo python setup.py install
