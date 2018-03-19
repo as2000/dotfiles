@@ -1,9 +1,9 @@
+[push]
+	default = current
 [user]
 	email = aiden.scott@pay4later.com
 	name = Aiden Scott
-[push]
-	default = simple
 [rerere]
 	enabled = true
 [help]
-	autocorrect = 2
+	autocorrect = -1
