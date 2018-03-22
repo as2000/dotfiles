@@ -20,5 +20,5 @@ ln bash_profile ~/.bash_profile
 sudo cp i3exit /usr/local/bin/i3exit
 
 cd ~/src/powerline-shell
-sudo python setup.py install
+# sudo python setup.py install
 source ~/.bash_profile

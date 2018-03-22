@@ -121,6 +121,7 @@ export CLICOLOR=1
 export TERM=xterm-256color
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export GDK_DPI_SCALE=1.6
 
 function _update_ps1() {
     PS1=$(powerline-shell $?)
