@@ -1,6 +1,6 @@
 exec --no-startup-id nm-applet
 exec setxkbmap -option caps:swapescape
-exec_always xrandr --dpi 180
+ exec_always xrandr --dpi 180
 exec eval "$(ssh-agent -s)"
 exec~/.screelayout/a.sh
 exec gpg-agent --daemon
@@ -79,7 +79,7 @@ bindsym $mod+backslash split h
 
 # split in vertical orientation
 #bindsym $mod+v split v
-bindsym $mod+minuR split v
+bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -232,4 +232,11 @@ bindsym Shift+$mod+bracketleft move workspace to output eDP-1
 
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #CCCC00
 default_border pixel 3
+
+
+
+bindsym $mod+Shift+period  move scratchpad
+bindsym $mod+period   scratchpad show
+
+
 
